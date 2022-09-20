@@ -35,7 +35,7 @@ body {
 #avatar {
   width: 230px;
   height: 230px;
-  background-image: url('rescoure/Avatar.png');
+  background-image: url('../../rescoure/Avatar.png');
   background-position: center center;
   background-size: contain;
   border-radius: 230px;
