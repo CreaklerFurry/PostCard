@@ -1,0 +1,115 @@
+/*
+仅修改此处来编辑你的 明信片！
+*/
+* {
+  font-family: Segoe UI, YaHei, Segoe MDL2 Assets;
+}
+body {
+  background: #3B3B3B;
+}
+.centerAll {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#clientRect,
+#client {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 960px;
+  height: 540px;
+}
+#clientRect #background-render {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  overflow: hidden;
+  background-image: url('https://images4.alphacoders.com/841/841629.jpg');
+  background-position: center center;
+  background-size: contain;
+  filter: blur(5px);
+}
+#avatar {
+  width: 230px;
+  height: 230px;
+  background-image: url('/rescoure/Avatar.png');
+  background-position: center center;
+  background-size: contain;
+  border-radius: 230px;
+}
+#name::after {
+  color: #000;
+  font-size: 64px;
+  content: 'Creakler - 吱吱';
+}
+#personalInfomationLists {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 0%;
+  width: 33%;
+  height: 100%;
+  border-radius: 20px 0 20px 0;
+}
+#personalInfomationLists .pIListsChild {
+  position: relative;
+  top: 10%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#personalInfomationLists .pIListsChild:after {
+  font-weight: bold;
+}
+#personalInfomationLists #f-name:after {
+  content: '昵称 :  ' 'Creakler - 吱吱';
+}
+#personalInfomationLists #f-sex:after {
+  content: '性别 :  ' '男';
+}
+#personalInfomationLists #f-bornDate:after {
+  content: '出生日期 :  ' '1970-01-01';
+}
+#personalInfomationLists #f-about {
+  white-space: pre;
+}
+#personalInfomationLists #f-about:after {
+  content: '个人信息 : \D\A' '你好，我不好';
+}
+#rightRectLists {
+  color: white;
+  direction: rtl;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  width: 33%;
+  height: 100%;
+}
+#rightRectLists #f-story {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  white-space: pre;
+}
+#rightRectLists #f-story:after {
+  content: '背景资料\D\A' 'None';
+}
+copyright {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 18px;
+  bottom: 2.5px;
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+copyright:after {
+  content: 'Copyright © Creakler 2018-2022';
+}

@@ -1,0 +1,129 @@
+@import 'values.less';
+// Main Ele
+*{
+    font-family: Segoe UI, YaHei, Segoe MDL2 Assets;
+}
+body{
+    background: #3B3B3B;
+}
+.centerAll{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Client Ele
+#clientRect, #client{
+    border-radius: @background-borderRadius;
+    overflow: hidden;
+
+    width: 960px;
+    height: 540px;
+}
+#clientRect #background-render{
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+
+    overflow: hidden;
+    background-image: url(@background-imageURL);
+    background-position: center center;
+    background-size: contain;
+    filter: blur(5px);
+}
+#avatar{
+    width: 230px;
+    height: 230px;
+
+    background-image: url(@furry-avatar);
+    background-position: center center;
+    background-size: contain;
+    border-radius: @furry-avatar-borderRadius;
+}
+#name::after{
+    color: @furry-name-color;
+    font-size: 64px;
+    content: @furry-name;
+}
+#personalInfomationLists{
+    color: white;
+    font-size: 18px;
+
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 33%;
+    height: 100%;
+
+    border-radius: @background-borderRadius 0 @background-borderRadius 0;
+    .pIListsChild{
+        position: relative;
+        top: 10%;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        &:after{
+            font-weight: bold;
+        }
+    }
+    #f-name{
+        &:after{
+            content: '昵称 :  ' @furry-name;
+        }
+    }
+    #f-sex{
+        &:after{
+            content: '性别 :  ' @furry-sex;
+        }
+    }
+    #f-bornDate{
+        &:after{
+            content: '出生日期 :  ' @furry-bornDate;
+        }
+    }
+    #f-about{
+        white-space: pre;
+        &:after{
+            content: '个人信息 : \D\A' @furry-about;
+        }
+    }
+}
+#rightRectLists{
+    color: white;
+    direction: rtl;
+    font-size: 18px;
+    font-weight: bold;
+
+    position: absolute;
+    right: 0;
+    width: 33%;
+    height: 100%;
+    #f-story{
+        position: absolute;
+        top: 10%;
+        right: 20px;
+        white-space: pre;
+        &:after{
+            content: '背景资料\D\A' @furry-story;
+        }
+    }
+}
+copyright{
+    color: white;
+    font-size: 16px;
+
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 18px;
+    bottom: 2.5px;
+    transform: translate(-50%, 0);
+
+    text-align: center;
+    &:after{
+        content: @website-Copyright-Data;
+    }
+}
