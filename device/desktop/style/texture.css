@@ -2,6 +2,7 @@
 仅修改此处来编辑你的 明信片！
 */
 * {
+  white-space: nowrap;
   font-family: Segoe UI, YaHei, Segoe MDL2 Assets;
 }
 body {
@@ -17,8 +18,10 @@ body {
 #client {
   border-radius: 20px;
   overflow: hidden;
-  width: 960px;
-  height: 540px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 48%;
+  height: 48%;
 }
 #clientRect #background-render {
   position: absolute;
@@ -33,9 +36,9 @@ body {
   filter: blur(5px);
 }
 #avatar {
-  width: 230px;
-  height: 230px;
-  background-image: url('../../rescoure/Avatar.png');
+  width: 24vh;
+  height: 24vh;
+  background-image: url('../../../rescoure/Avatar.png');
   background-position: center center;
   background-size: contain;
   border-radius: 230px;
@@ -69,16 +72,16 @@ body {
   content: '昵称 :  ' 'Creakler - 吱吱';
 }
 #personalInfomationLists #f-sex:after {
-  content: '性别 :  ' '男';
+  content: '性别 :  ' 'Boy';
 }
 #personalInfomationLists #f-bornDate:after {
-  content: '出生日期 :  ' '1970-01-01';
+  content: '出生日期 :  ' '09-08-17';
 }
 #personalInfomationLists #f-about {
   white-space: pre;
 }
 #personalInfomationLists #f-about:after {
-  content: '个人信息 : \D\A' '你好，我不好';
+  content: '个人信息 : \D\A' '你好，再见';
 }
 #rightRectLists {
   color: white;
@@ -97,16 +100,16 @@ body {
   white-space: pre;
 }
 #rightRectLists #f-story:after {
-  content: '背景资料\D\A' 'None';
+  content: '背景资料\D\A' 'I am a normal animal';
 }
 copyright {
   color: white;
-  font-size: 16px;
+  font-size: 8px;
   position: absolute;
   left: 50%;
   width: 50%;
-  height: 18px;
-  bottom: 2.5px;
+  height: 10px;
+  bottom: 10px;
   transform: translate(-50%, 0);
   text-align: center;
 }
