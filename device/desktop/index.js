@@ -11,3 +11,12 @@ if (curDeviceObj.currentDevice || curDeviceObj.detectDevice == 'Mobile')
         location.pathname = '/device/mobile/mobileDevice.html'
     }
 }
+document.getElementById('avatar').onclick = () => {
+    confirm (`
+    QQ: 2937396379
+    WeChat: None
+    Blog: https://qianshi-oristudio.github.io/
+    twitter: https://twiiter.com/@creakler1
+    BiliBili: None
+    `)
+}
