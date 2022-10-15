@@ -1,0 +1,88 @@
+@website-background-imageURL: 'https://api.ixiaowai.cn/gqapi/gqapi.php';
+@myself-avatar-image: '/rescoure/image/data';
+// set All Style
+*
+{
+    -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1); 
+    text-align: 0;
+    margin: 0;
+};
+body
+{
+    background: url(@website-background-imageURL) center center no-repeat fixed;
+    background-size: cover;
+};
+// set Custom Style
+#postCardView
+{
+    transform: translate(-50%, -50%);
+    // set pos-mode &size
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: 60%;
+    // set min-size
+    min-width: 600px;
+    min-height: 600px;
+    // set others
+    box-shadow: 0 0 100px;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: transparent;
+
+    #viewBackground
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f2f6aa;
+    }
+    #viewAccountRect
+    {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        // set others
+        z-index: 114514;
+        background-color: transparent;
+    }
+    #viewAccount, #viewInfomation
+    {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        // background-color: #000;
+        // set others
+        opacity: 0;
+        z-index: 0;
+    }
+    #viewInfomation
+    {
+        left: 0;
+        opacity: 1;
+    }
+
+    #avatarImage
+    {
+        transform: translate(10%, -50%);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 25vw;
+        height: 25vw;
+        // set min-size
+        min-width: 250px;
+        min-height: 250px;
+        // set others
+        border-radius: 50%;
+        background-color: #000;
+    }
+};
