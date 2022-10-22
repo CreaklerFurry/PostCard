@@ -4,18 +4,30 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style/viewInfomaton.css">
         <link rel="stylesheet" href="./style/index.css">
+        <script src="./script/libraries/yaml.js"></script>
         <script src="./script/libraries/listenerExtra.js"></script>
         <script src="./script/index.js"></script>
-        <title class="mTranslation" oriText="{-WebsiteTitle-}"></title>
+        <script src="./language/language.js"></script>
+        <title class="mTranslation" oriText="$WebsiteTitle$"></title>
     </head>
     <body>
         <div id="postCardView">
             <div id="viewBackground"></div>
-            <img id="avatarImage" alt="avatar">
+            <img id="originalCharacterAvatarImage" alt="avatar">
             <rect id="viewAccountRect"></rect> <!--一个Rect判定-->
             <div id="viewAccount"></div>
-            <div id="viewInfomation"></div>
+            <div id="viewInfomation">
+                <item id="name"><text class="mTranslation" oriText="$pf-name$: $~data$"></text></item>
+                <item id="stature"><text class="mTranslation" oriText="$pf-stature$: $~data$"></text></item>
+                <item id="age"><text class="mTranslation" oriText="$pf-age$: $~data$"></text></item>
+                <item id="weight"><text class="mTranslation" oriText="$pf-weight$: $~data$"></text></item>
+                <item id="sexy"><text class="mTranslation" oriText="$pf-sexy$: $~data$"></text></item>
+                <item id="sexualOrigetation"><text class="mTranslation" oriText="$pf-sexualOrientation$: $~data$"></text></item>
+                <item id="about"><text class="mTranslation" oriText="$pf-about$: $~data$"></text></item>
+                <item id="oc-backdrop"><text class="mTranslation" oriText="$pf-oc_backdrop$: $~data$"></text></item>
+            </div>
         </div>
     </body>
 </html>

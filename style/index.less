@@ -1,5 +1,3 @@
-@website-background-imageURL: 'https://api.ixiaowai.cn/gqapi/gqapi.php';
-@myself-avatar-image: '/rescoure/image/data';
 // set All Style
 *
 {
@@ -9,11 +7,6 @@
     margin: 0;
 
     //font-family: 
-};
-body
-{
-    background: url(@website-background-imageURL) center center no-repeat fixed;
-    background-size: cover;
 };
 // set Custom Style
 #postCardView
@@ -41,7 +34,6 @@ body
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: #f1f2f6aa;
     }
     #viewAccountRect
     {
@@ -60,8 +52,7 @@ body
         left: 50%;
         top: 0;
         width: 50%;
-        height: 100%;
-        background-color: #000; // dev
+        // background-color: #000; // dev
         // set others
         opacity: 0;
         z-index: 0;
@@ -72,7 +63,7 @@ body
         opacity: 1;
     }
 
-    #avatarImage
+    #originalCharacterAvatarImage
     {
         transform: translate(10%, -50%);
         position: absolute;
@@ -85,6 +76,5 @@ body
         min-height: 250px;
         // set others
         border-radius: 50%;
-        background-color: #000;
     }
 };

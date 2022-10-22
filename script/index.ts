@@ -6,7 +6,8 @@
 // 则采用 单击变换 操作。
 // 对于 Desktop Table 类端：
 // 则采用 悬浮操作；若viewWidth < viewHeight*2 时，支持单击变换
-var avatarImage, viewAccountRect, viewAccount, viewInfomation;
+var OCavatarImage, viewAccountRect, viewAccount, viewInfomation;
+var WebsiteConfig: object;
 var interface = {//写个方法类集合
     isMobile: () => { // 包括 ios android 等
         return /Android|iPhone|iPad|iPod|BlackBerry|webOS|Windows Phone|SymbianOS|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -16,19 +17,43 @@ var interface = {//写个方法类集合
     },
     getElementStyle: (element: any, styleName) => {
         return element.style.getProperty(styleName)
+    },
+    url: (method:string, url:string) => {
+        let XHR = new XMLHttpRequest(), returnJson;
+        XHR.open (method, url, false);
+        XHR.onreadystatechange = () =>{
+            if (XHR.readyState == 4 && (XHR.status == 200 || (XHR.status == 304))) {
+                returnJson = XHR.responseText;
+            } else {
+                console.warn('WARN: 资源未找到!');
+            };
+        };
+        XHR.send ();
+        return returnJson;
     }
 };
 
 listenerExtra.add (window, 'load', () => {
-    avatarImage = document.getElementById ('avatarImage'); // 基础元素申明
+    WebsiteConfig = JSON.parse(interface.url('GET', 'config.json'))
+    {
+        let applyTheme = document.createElement('link');
+        applyTheme.rel = 'stylesheet';
+        applyTheme.href = WebsiteConfig['websiteInfo']['theme'];
+        document.getElementsByTagName('html')[0].appendChild (applyTheme);
+    };
+    {
+        document.getElementById('originalCharacterAvatarImage')?.setAttribute('src', WebsiteConfig['websiteInfo']['oc-avater-rescoure-image']);
+    };
+
+    OCavatarImage = document.getElementById ('originalCharacterAvatarImage'); // 基础元素申明
     viewAccountRect = document.getElementById ('viewAccountRect');
     viewAccount = document.getElementById ('viewAccount');
-    viewInfomation = document.getElementById ('viewInfomation')
+    viewInfomation = document.getElementById ('viewInfomation');
     // ↓ avatarElement
     {
         if (interface.isMobile ()){
             viewAccountRect?.remove()
-            listenerExtra.add (avatarImage, 'click', program.listener.avatarElement.mobileFeedback.click)
+            listenerExtra.add (OCavatarImage, 'click', program.listener.avatarElement.mobileFeedback.click)
         }else{
             listenerExtra.add (viewAccountRect, 'mouseover', program.listener.avatarElement.desktopFeedback.over)
             listenerExtra.add (viewAccountRect, 'mouseout', program.listener.avatarElement.desktopFeedback.out)
@@ -42,18 +67,18 @@ let program = {
                 click: () => {
                     console.log('clicked');
                     program.view.AccountAndInfoChange ();
-                    interface.setElementStyle(avatarImage, 'left',
-                    avatarImage.style.left == '0px'? '50%': '0px', true);
+                    interface.setElementStyle(OCavatarImage, 'left',
+                    OCavatarImage.style.left == '0px'? '50%': '0px', true);
                 }
             },
             desktopFeedback: {
                 over: () => {
                     program.view.AccountAndInfoChange ();
-                    interface.setElementStyle (avatarImage, 'left', '0', true)
+                    interface.setElementStyle (OCavatarImage, 'left', '0', true)
                 },
                 out: () => {
                     program.view.AccountAndInfoChange ();
-                    interface.setElementStyle (avatarImage, 'left', '50%', true)
+                    interface.setElementStyle (OCavatarImage, 'left', '50%', true)
                 }
             },
         }

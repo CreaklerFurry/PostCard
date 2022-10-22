@@ -1,0 +1,16 @@
+* {
+  font-family: 'Segoe UI';
+}
+body {
+  background: url('https://api.ixiaowai.cn/gqapi/gqapi.php') center center no-repeat fixed;
+  background-size: cover;
+}
+#originalCharacterAvatarImage {
+  background-color: #000000AF;
+}
+#viewBackground {
+  background-color: #f1f2f6aa;
+}
+#viewInfomation {
+  font-size: 20px;
+}

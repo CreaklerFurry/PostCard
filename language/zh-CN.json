@@ -1,0 +1,13 @@
+{
+    "WebsiteTitle": "吱吱の名片",
+    "prefix": {
+        "name": "昵称",
+        "stature": "身高",
+        "age": "年龄",
+        "weight": "体重",
+        "sexy": "性别",
+        "sexualOrientation": "性取向",
+        "about": "关于自己",
+        "oc_backdrop": "OC设定背景"
+    }
+}

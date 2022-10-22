@@ -1,0 +1,10 @@
+#viewInfomation {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+#viewInfomation item {
+  display: flex;
+  margin: 10px 20px;
+  white-space: pre-wrap;
+}

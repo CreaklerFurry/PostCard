@@ -1,0 +1,18 @@
+websiteInfo:
+  isDevStatus: false # 是否开发模式
+  isCustom: false # 是否自定义 是则在 /language/custom.json 中修改！
+  oc-avater-rescoure-image: '' # 头像 Avatar 元素的资源路径
+  # titleText: 吱吱の名片 # 标题 已不支持，请在 /language/<lang>.json中修改！
+personalInfo: # 个人信息 不要真的填写自己的真实信息！
+  name: 吱吱 # 昵称
+  sexy: 2642 # 性别 2642 男性 | 2640 女性 | 26A6 双性人/变性人/雌雄同体 | 26B2 中性/太监
+  age: 08 # 年龄
+  stature: '170~180 (oc: 170~180)' #身高
+  weight: 50kg+ # 体重
+  sexualOrientation: 26A3 # 26A4 异性恋 | 26A2 女性同性恋 | 26A3 男性同性恋 | 26A5 双性恋 | 26A7 泛性恋 | LGBT 少数性取向人群 | None 不愿说明
+  about:
+    - 关于自己\n
+      测试
+  oc-backdrop:
+    - 关于OC背景\n
+      测试
