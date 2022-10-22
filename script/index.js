@@ -71,7 +71,7 @@ var program = {
                 click: function () {
                     console.log('clicked');
                     program.view.AccountAndInfoChange();
-                    interface.setElementStyle(OCavatarImage, 'left', OCavatarImage.style.left == '0px' ? '50%' : '0px', true);
+                    interface.setElementStyle(OCavatarImage, 'left', OCavatarImage.style.left == '-25%' ? '50%' : '-25%', true);
                 }
             },
             desktopFeedback: {
