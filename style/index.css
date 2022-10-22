@@ -3,6 +3,7 @@
   transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
   text-align: 0;
   margin: 0;
+  font-size: 1vh;
 }
 #postCardView {
   transform: translate(-50%, -50%);
@@ -11,8 +12,8 @@
   top: 50%;
   width: 60%;
   height: 60%;
-  min-width: 600px;
-  min-height: 600px;
+  min-width: 300px;
+  min-height: 300px;
   box-shadow: 0 0 100px;
   overflow: hidden;
   border-radius: 16px;
@@ -31,7 +32,7 @@
   top: 0;
   width: 50%;
   height: 100%;
-  z-index: 114514;
+  z-index: 3;
   background-color: transparent;
 }
 #postCardView #viewAccount,
@@ -57,4 +58,5 @@
   min-width: 250px;
   min-height: 250px;
   border-radius: 50%;
+  z-index: 2;
 }
